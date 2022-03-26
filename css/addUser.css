@@ -1,0 +1,93 @@
+body,html { 
+    width: devicewidth;
+  height: deviceheight;
+  font-family: 'Montserrat', sans-serif; 
+  
+ background: white no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+.heading{
+  float: center;
+  color: black;
+  text-align: center;
+  padding: 10px ;
+  margin-top: 40px ;
+  text-decoration: none;
+  font-size: 40px;
+} 
+#SubmitButton {   
+       background-color:#128c7e;   
+       width: 100%;  
+        color: white;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid black;   
+        box-sizing: border-box;   
+    }  
+ #SubmitButton:hover {   
+        opacity: 0.7;   
+    }   
+
+
+           
+ .container2 { 
+        float: center;
+        text-align: center;        
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 40px 40px 10px 40px;   
+        background-color: white;  
+        border: 2px solid black; 
+  }   
+ .container3 {
+      background: white no-repeat center center fixed; 
+      max-width: 50rem;
+      margin: 2rem auto;
+      /*padding-bottom: 2rem;*/
+      -webkit-box-shadow: 0px 4px 22px -6px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 4px 22px -6px rgba(0,0,0,0.75);
+      box-shadow: 0px 4px 22px -6px rgba(0,0,0,0.75);
+ }
+    
+    
+    i.fa-trash-o:hover{
+      color: red;
+    }
+    
+    .table-users {
+      width: 100%;
+      /*margin: 2rem auto;*/
+      border-collapse: collapse;
+    }
+    
+    .table-users th, .table-users td {
+      text-align: left;
+      
+      border-bottom: 1px solid #ddd;
+     /* border-left: 1px solid #ddd;
+      border-right:  1px solid #ddd;*/
+      padding: 1rem;
+    }
+    
+    .table-users th {
+      background: #fafafa;
+      padding: 1rem auto;
+    }
+    
+    
+    .table-wrapper {
+      text-align: center;
+    }
+    

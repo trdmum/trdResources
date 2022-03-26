@@ -1,0 +1,35 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, shrink-to-fit=no">
+<title> Login </title>  
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/addUser.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/fam.css">
+  <link rel="stylesheet" href="css/bms.css">
+</head>    
+<body style="background-color: white;">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="mainNav" style="padding: 0px;background-color: #128c7e;">
+        <div class="container" style="background-color: #128c7e;">
+          <a class="navbar-brand" href="#page-top" style="font-family: Montserrat;background-color: #128c7e;overflow: hidden;">&nbsp; TRD&nbsp; Mumbai Divison
+          </a>
+        </div>
+    </nav>
+
+    <p class="heading"> Login </p>   
+    
+    <div class="container2">   
+        <input id="user" onclick="clearData()" type="text" placeholder="Enter Username" name="username" required>      
+        <input id = "password" onclick="clearData()" type="password" placeholder="Enter Password" name="password" required>  
+        <button id="SubmitButton" onclick="checkUserData()">Login</button>   
+        <div id="success" style="color: #128c7e;text-align: center;"></div>
+    </div>   
+
+    
+</body>
+<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+<script src="js/login.js"></script>     
+<script src="js/bms.js"></script>
+</html>  
