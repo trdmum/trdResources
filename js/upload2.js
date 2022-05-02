@@ -25,6 +25,7 @@ firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
 var databaseRef = database.ref().child("uploadedPDFdropBox");
+var databaseRefDel = database.ref().child("dropboxDelete");
 
 var ref=firebase.database().ref().child('AdminAccessToken');
     ref.once("value").then(function(snapshot) {                  
@@ -309,7 +310,42 @@ function getElementIndex(filePath)
                       key2=key;
                       if(value==downloadLink){
                         // console.log("found at "+key1+"/"+key2);
+
                         databaseRef.child(key1).child(key2).remove();
+                        let timeNow1 = new Date().toLocaleString("en-IN", {timeZone: 'Asia/Kolkata',hour12:false});
+                        var timeNow="";
+                        if(timeNow1[1]=='/'){
+                          timeNow+="0"+timeNow1[0]+"/";
+                          if(timeNow1[3]=="/"){
+                            timeNow+="0"+timeNow1.substr(2);
+                          }
+                          else{
+                            timeNow+=timeNow1.substr(2); 
+                          }
+                        }else{
+                          timeNow+=timeNow1[0]+timeNow1[1]+"/";
+                          if(timeNow1[4]=="/"){
+                            timeNow+="0"+timeNow1.substr(3);
+                          }
+                          else{
+                            timeNow+=timeNow1.substr(3); 
+                          }
+                        }
+                        
+                        // console.log(timeNow);
+                        var dateStr=timeNow[6]+timeNow[7]+timeNow[8]+timeNow[9]+timeNow[3]+timeNow[4]+timeNow[0]+timeNow[1];
+                        var timeStr=timeNow[12]+timeNow[13]+timeNow[15]+timeNow[16]+timeNow[18]+timeNow[19];
+                        var timeStamp=dateStr+"_"+timeStr;
+                        // console.log(timeStamp);
+                        var timeStamp2="";
+                        for(let i=0;i<8;i++){
+                          timeStamp2+=(9-timeStamp[i]);
+                        }
+                        timeStamp2+="_";
+                        for(let i=9;i<15;i++){
+                          timeStamp2+=(9-timeStamp[i]);
+                        }
+                        databaseRefDel.child(timeStamp2).child('path').set(filePath);
                         deleteItems(filePath);
                       }     
                     });
@@ -353,6 +389,7 @@ async function listItems(dept,id,level){
 }
 
 function deleteItems(filePath){
+
     dbx.filesDeleteV2({path: filePath})
         .then(function(response) {
           // console.log('response', response)          
