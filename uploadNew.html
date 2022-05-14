@@ -108,6 +108,21 @@
   </ul>
   </section>
 
+  <div id="popid01" class="modal">
+  <span onclick="document.getElementById('popid01').style.display='none'" class="close" title="Close Modal">×</span>
+  <div class="modal-content" >
+    <div class="container2">
+      <h1>Delete File</h1>
+      <p>Are you sure you want to delete this file?</p>    
+      <p>Type <i> delete me </i> in text field below to confirm delete</p>
+      <input  style="margin-top: 10px;margin-bottom: 10px;max-width: 140px;" id="userInput" onclick="" type="text" placeholder="delete me" name="username" required>                       
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('popid01').style.display='none';clearText();" class="cancelbtn">Cancel</button>
+        <button type="button" onclick="clearData();" class="deletebtn">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
   
 
   </body>
