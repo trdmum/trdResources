@@ -368,7 +368,7 @@ function addToList(files,id,level){
         if(files[i].name.endsWith("pdf")){
           li.className='cd-accordion__item';
           var filePath="'"+files[i].path_display.substring(0)+"'";          
-          li.innerHTML='<div class="cd-accordion__label cd-accordion__label--icon-img"><i class="fa fa-trash-o" style="font-size:1.5em;cursor:pointer;" onclick="getElementIndex('+filePath+');"></i><span>'+files[i].name+'</span></div>';
+          li.innerHTML='<div class="cd-accordion__label cd-accordion__label--icon-img"><i class="fa fa-trash-o" style="font-size:1.5em;cursor:pointer;" onclick="delPopUp2('+filePath+');"></i><span>'+files[i].name+'</span></div>';
         }        
         ul.appendChild(li);
       }
@@ -634,7 +634,7 @@ function addToList2(files,id,level){
         var li = document.createElement('li');        
         if(files[i].endsWith("pdf")){
           li.className='cd-accordion__item';        
-          li.innerHTML='<div class="cd-accordion__label cd-accordion__label--icon-img"><i class="fa fa-trash-o" style="font-size:1.5em;cursor:pointer;"></i><span>'+files[i]+'</span></div>';              
+          li.innerHTML='<div class="cd-accordion__label cd-accordion__label--icon-img"><i class="fa fa-trash-o" style="font-size:1.5em;cursor:pointer;"onclick="delPopUp();"></i><span>'+files[i]+'</span></div>';              
         }
         else{
           li.className='cd-accordion__item cd-accordion__item--has-children';            
@@ -669,4 +669,40 @@ function removeMainListing(){
       '<input class="cd-accordion__input" type="checkbox" id="grp1">'+
       '<label class="cd-accordion__label cd-accordion__label--icon-folder" for="grp1"><span>UPLOADED FILES</span></label>'+
       '</li></ul>';
+}
+
+function delPopUp(){
+  document.getElementById('popid01').style.display='block';
+}
+
+var currentFilePath="";
+
+function delPopUp2(filePath){
+  document.getElementById('popid01').style.display='block';
+  currentFilePath=filePath;
+}
+
+var modal = document.getElementById('popid01');
+function clearData(){
+  if(document.getElementById('userInput').value=="delete me"){
+    console.log("delete haha");
+    document.getElementById('popid01').style.display='none';
+    if(currentFilePath.length>0){ 
+      getElementIndex(currentFilePath);
+    }else{
+      console.log("not deleted");
+    }
+  }
+  clearText();
+}
+
+function clearText(){
+  currentFilePath="";
+  document.getElementById('userInput').value="";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
