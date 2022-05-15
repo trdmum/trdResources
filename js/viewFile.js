@@ -474,10 +474,10 @@ window.onclick = function(event) {
 }
 
 function viewFile2(filePath){
-   console.log(filePath)
+   // console.log(filePath)
    dbx.sharingCreateSharedLink({path:filePath })
         .then(function(res) {
-          console.log('response', res)   
+          // console.log('response', res)   
           var downloadLinkNew=res.result.url;                                     
           
           // location.href=downloadLinkNew;
@@ -489,7 +489,7 @@ function viewFile2(filePath){
 }
 
 function viewFile(filePath){
-    console.log(filePath)
+    // console.log(filePath)
 
     dbx.sharingGetSharedLinks({path:filePath })
         .then(function(res) {
