@@ -381,7 +381,7 @@ function addToList2(files,id,level){
       var filesList = document.getElementById(id);    
       var deptPath='';
       if(id.charAt(id.length-3)=='2'){
-            deptPath="First/ACTM/";
+            deptPath="ACTM/";
           }               
       else{
         deptPath="";
@@ -394,10 +394,10 @@ function addToList2(files,id,level){
           li.className='cd-accordion__item';        
           if(deptPath.length>0){
             if(files[i].substring(0,3)=="ACS"){
-              deptPath="First/IRSOD/";
+              deptPath="IRSOD/";
             }
           }
-          var filePath="'/"+deptPath+id.substring(0,id.length-3)+'/'+files[i]+"'";                    
+          var filePath="'/First/"+deptPath+id.substring(0,id.length-3)+'/'+files[i]+"'";                    
           // var filePath="/actm/"
           // li.innerHTML='<div class="cd-accordion__label cd-accordion__label--icon-img"><i class="fa fa-trash-o" style="font-size:1.5em;cursor:pointer;"onclick="delPopUp();"></i><span>'+files[i]+'</span></div>';              
           li.innerHTML='<div class="cd-accordion__label cd-accordion__label--icon-img"><span style="cursor:pointer;" onclick="viewFile2('+filePath+');">'+files[i]+'</span></div>';              
