@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fam.css">
     <link rel="stylesheet" href="css/bms.css">
-    <script>document.getElementsByTagName("html")[0].className += " js";</script>
-    <link rel="stylesheet" href="assets/css/style.css">
+    
 
 
 </head>
@@ -37,8 +36,12 @@
 <div class="container2" style="margin-top: 100px;margin-bottom: 60px;">
 <p  align=center><img src="assets/TRD RAILWAY LOGO.jpeg" alt="TRD RAILWAY LOGO" height=160px width=160px></p>
 <div >
-    <button id="myButton" onclick="window.location.href='uploadNew.html';">
+      <button id="myButton" onclick="window.location.href='uploadNew.html';">
         UPLOAD FILE
+      </button>
+      <br>
+      <button id="myButton" onclick="window.location.href='viewFile.html';">
+        VIEW UPLOADED FILES
       </button>
       <br>
       <button id="myButton" onclick="window.location.href='addUser.html';">
@@ -48,55 +51,7 @@
       <button id="myButton" onclick="window.location.href='feedback.html';">
         FEEDBACK
       </button>
-      <br>
-      <section class="container max-width-sm" style="margin-bottom: 200px;">
-      <ul class="cd-accordion cd-accordion--animated margin-top-lg margin-bottom-lg" style="box-shadow:none">
-      <li class="cd-accordion__item cd-accordion__item--has-children">      
-      <input class="cd-accordion__input" type="checkbox" id="grp1">
-      <label class="cd-accordion__label cd-accordion__label--icon-folder" for="grp1"><span>UPLOADED FILES</span></label>
-      
-      <ul class="cd-accordion__sub cd-accordion__sub--l1" style="box-shadow:none">
-        <!-- <li class="cd-accordion__item cd-accordion__item--has-children">
-          <input class="cd-accordion__input" type="checkbox" name ="sub-group-3" id="sub-group-1">
-          <label class="cd-accordion__label cd-accordion__label--icon-folder" for="sub-group-1"><span>Sub Group 1</span></label>        
-        </li>
-        <li class="cd-accordion__item cd-accordion__item--has-children">
-          <input class="cd-accordion__input" type="checkbox" name ="sub-group-3" id="sub-group-2">
-          <label class="cd-accordion__label cd-accordion__label--icon-folder" for="sub-group-2"><span>Sub Group 2</span></label>        
-        </li> -->
-
-        <!-- <li class="cd-accordion__item cd-accordion__item--has-children">
-          <input class="cd-accordion__input" type="checkbox" name ="sub-group-3" id="sub-group-3">
-          <label class="cd-accordion__label cd-accordion__label--icon-folder" for="sub-group-3"><span>Sub Group 3</span></label>
-
-          <ul class="cd-accordion__sub cd-accordion__sub--l2">
-            <li class="cd-accordion__item"><a class="cd-accordion__label cd-accordion__label--icon-img" href="#0"><span>Image</span></a></li>
-            <li class="cd-accordion__item"><a class="cd-accordion__label cd-accordion__label--icon-img" href="#0"><span>Image</span></a></li>
-          </ul>
-        </li> -->      
-        
-      </ul>
-    </li>
-  </ul>
-  </section>
-
-  <div id="popid01" class="modal">
-  <span onclick="document.getElementById('popid01').style.display='none'" class="close" title="Close Modal">×</span>
-  <div class="modal-content" >
-    <div class="container2">
-      <h1>Delete File</h1>
-      <p>Are you sure you want to delete this file?</p>    
-      <p>Type <i> delete me </i> in text field below to confirm delete</p>
-      <input  style="margin-top: 10px;margin-bottom: 10px;max-width: 140px;" id="userInput" onclick="" type="text" placeholder="delete me" name="username" required>                       
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('popid01').style.display='none';clearText();" class="cancelbtn">Cancel</button>
-        <button type="button" onclick="clearData();" class="deletebtn">Delete</button>
-      </div>
-    </div>
-  </div>
-</div>
-  
-
+      <br>    
 </div>
 </div>
 
@@ -104,14 +59,7 @@
 </body>
 <!-- <script src="js/setAccessToken.js"></script> -->
 <!-- <script src="js/upload.js"></script> -->
-<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-storage.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@7/dist/polyfill.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js"></script>
-  <script type="text/javascript" src="https://unpkg.com/dropbox@10.23.0/dist/Dropbox-sdk.min.js"></script>
-  
-  <script src="js/home.js"></script>
+
 
 <script src="js/bms.js"></script>
 </html>
